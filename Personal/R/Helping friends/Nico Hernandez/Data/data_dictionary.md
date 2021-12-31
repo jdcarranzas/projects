@@ -11,14 +11,18 @@ This dataset contains the id of the people associated with their respective chur
 | Documento del cliente | ID | Unique code that identifies the client, used for merging with the Credits.csv dataset, Payments.csv dataset and Personal_Data.csv dataset |
 | Probabilidad de churn | float | Churn probability associated with that particular client |
 
-## artist_corpus.csv
+## Credits.csv
 
-El dataset es un corpus completo con todas las canciones de cada uno de los artistas, donde cada registro es un artista único con el corpus completo de su repertorio musical. 
+This dataset contains the information from the clients and details of disbursement
 
-| columna | tipo | descripción |
+| feature | type | description |
 | --- | --- | --- |
-| artist | STR | Nombre del artista |
-| lyrics  | STR | Todas las canciones del artista unidas en un solo corpus |
+| Documento del cliente | ID | Unique code that identifies the client, used for merging with the Churn_Probability.csv dataset, Payments.csv dataset and Personal_Data.csv dataset |
+| Fecha de desembolso | date | Date of disbursement from the bank to the client |
+| Valor del desembolso | int | Exact value of the disbursement from the bank |
+| Tasa Efectiva Anual | float | Real interest rate issued by the bank |
+| Plazo | int | Amount of months/payments agreed with the client |
+| Cuota | float | Monthly payment from the client |
 
 ## songs_df.csv
 
