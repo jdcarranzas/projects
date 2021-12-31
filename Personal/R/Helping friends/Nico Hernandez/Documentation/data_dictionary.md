@@ -24,15 +24,24 @@ This dataset contains the information from the clients and details of disburseme
 | Plazo | int | Amount of months/payments agreed with the client |
 | Cuota | float | Monthly payment from the client |
 
-## songs_df.csv
+## Personal_Data.csv
 
-El dataset es similar, salvo que cada registro es una canción única del artista y permite el análisis preliminar del script de EDA. 
+This dataset contains the information from the clients
 
-| columna | tipo | descripción |
+| feature | type | description |
 | --- | --- | --- |
-| artist | STR | Nombre del artista |
-| lyrics  | STR | Todas las canciones del artista, separadas en registros únicos por canción |
+| Documento del cliente | ID | Unique code that identifies the client, used for merging with the Churn_Probability.csv dataset, Payments.csv dataset and Credits.csv dataset |
+| Sector | str/factor | Occupation of the client |
+| Edad | int | Age of the client |
+| Género | bool | 0: Female, 1: Male. Indicates the sex of the client |
 
-## corpus.txt
+## Payments.txt
 
-Es un archivo de texto sin estructura de dataset que contiene todas las canciones de todos los artistas, usado para el entrenamiento y ajuste del modelo de redes neuronales LSTM para la generación de lyrics.
+Contains detailed information about the payments made by the clients
+
+| feature | type | description |
+| --- | --- | --- |
+| Documento del cliente | ID | Unique code that identifies the client, used for merging with the Churn_Probability.csv dataset, Personal_Data.csv dataset and Credits.csv dataset |
+| Cuotas ya pagadas | int | Number of payed fees |
+| Madurez | float | Age of the credit, if is over 1, it has passed the total initial amount of time |
+| Probabilidad de churn | float | Churn Probability for the credit |
